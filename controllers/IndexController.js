@@ -1,10 +1,15 @@
-class IndexController{
+const webAuth = require('../helpers/webAuth');
+
+class IndexController {
     /**
      * Method To Render Index Page
      */
-    renderPage = async(req, res)=>{
-        return res.render("blank/index", {title: "Index Page"});
-    }
+    renderPage = [
+        webAuth,
+        async (req, res) => {
+            return res.render("blank/index", { title: "Index Page" });
+        }
+    ];
 
     /**
      * Method To Render Index Page
