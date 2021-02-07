@@ -58,6 +58,7 @@ class AuthController {
                     if (!isPasswordMatches)
                         return apiResponse.errorResponse(res, "Invalid Credentials");
                     else {
+                        //Setup Session
                         req.session.userName = user.firstName + " " + user.lastName;
                         req.session.email = user.email;
                         req.session.userId = user._id;
