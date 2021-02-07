@@ -66,7 +66,6 @@ class AuthController {
 
                 }
             } catch (err) {
-                console.log(err);
                 return apiResponse.errorResponse(res, err.message);
             }
         }
